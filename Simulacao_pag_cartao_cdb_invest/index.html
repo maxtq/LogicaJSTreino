@@ -1,0 +1,49 @@
+<!-- Feito com ia -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela e Gráfico</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Meu relatório</h1>
+
+    <section class="container">
+
+        <div class="tabela-container">
+            <h2>Dados</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>dívida</th>
+                        <th>cdb</th>
+                        <th>IBrX 100</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela">
+                    <!-- O JavaScript vai colocar os dados aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="grafico-container">
+            <h2>Gráfico</h2>
+
+            <canvas id="grafico"></canvas>
+        </div>
+
+    </section>
+
+</body>
+</html>
+
