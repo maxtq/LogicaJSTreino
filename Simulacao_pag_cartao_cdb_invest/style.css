@@ -56,10 +56,38 @@ tr:hover {
 
 .grafico-container {
     min-height: 400px;
+    display: flex;
+    flex: 1;
+    min-width: 0;
 }
 
 @media (max-width: 800px) {
     .container {
         grid-template-columns: 1fr;
     }
+}
+.tabela-container {
+    width: 100%;
+}
+
+.tabela-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.valores-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+th {
+    background: #333;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }

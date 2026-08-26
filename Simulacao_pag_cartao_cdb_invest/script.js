@@ -1,5 +1,6 @@
 const dados = [
     {
+        mes: 0,
         divida: 0,
         cdb: 0,
         ibxr100: 0
@@ -32,14 +33,26 @@ function crescimento_divida() {
     if (Rngtakediv >= 500) {
 
         const valordiv = Math.random();
-        const novaDivida = valordiv * 1000;
+        const novaDivida = dados[dados.length-1].divida + valordiv * 1000;
 
         dados.push({
-            divida: novaDivida + dados.divida,
-            cdb: (novaDivida / 2) + dados.cdb,
-            ibxr100: (novaDivida / 2) + dados.ibrx100
+            mes: dados[dados.length-1].mes + 1,
+            divida: novaDivida,
+            cdb: novaDivida,
+            ibxr100: novaDivida
         });
         preencherTabela(dados);
+    }else{
+    
+    novaDivida = dados[dados.length-1].divida
+
+    dados.push({
+        mes: dados[dados.length-1].mes + 1,
+        divida: novaDivida,
+        cdb: novaDivida,
+        ibxr100: novaDivida
+    });
+    preencherTabela(dados);
     }
 }
 
