@@ -43,14 +43,21 @@ function crescimento_divida() {
     // gera numero aleatorio
     const Rngtakediv = Math.random() * 1000;
 
+    const ultimo = dados[dados.length - 1];
+
+    let novaDivida = ultimo.divida
+
     if (Rngtakediv >= 500) {
 
         const valordiv = Math.random() * 1000;
-        const novaDivida = dados[dados.length-1].divida + valordiv;
+        
+        novaDivida += valordiv;
 
         dados.push({
-            mes: dados[dados.length-1].mes + 1,
-            divida: novaDivida
+            mes: ultimo.mes + 1,
+            divida: novaDivida,
+            cdb: ultimo.cdb,
+            ibxr100: ultimo.ibrx100
         });
         preencherTabela(dados);
 
@@ -70,7 +77,7 @@ function crescimento_divida() {
 }
 
 // funcao que simula a quantidade de parcelas e o valor delas
-function crescimento_cdb() {
+function crescimento_parcelas() {
     
 }
 
@@ -84,5 +91,5 @@ function crescimento_ibrx100() {
     
 }
 
-const interval = setInterval(crescimento_divida,2500);
+const interval = setInterval(avancar_mes,2500);
 preencherTabela(dados);
